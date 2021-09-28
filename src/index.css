@@ -57,13 +57,15 @@ body {
 
 .triad-btn{
   color: white;
+  font-weight: 800;
+  font-size: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
 .accept-btn{
-  background-color: #00b300;
+  background-color: #26d326;
   border-radius: 100%;
   font-size: 30px;
   color: white;
@@ -72,10 +74,19 @@ body {
 }
 
 .decline-btn{
-  background-color: #ff0000;
+  background-color: #e92727;
   border-radius: 100%;
   font-size: 30px;
   color: white;
   border: none;
   padding: 2rem;
+}
+
+.decline-btn:hover{
+  background-color: #680000;
+}
+
+
+.accept-btn:hover{
+  background-color: #0b7c0b;
 }

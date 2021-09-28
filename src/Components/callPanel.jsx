@@ -4,12 +4,14 @@ const CallPanel = () => {
   return (
     <div className="call-panel">
       <div className="triad-btn">
+        <i className="fa-solid fa-clock"></i>
         <p>Remind me</p>
         <i className="decline-btn fa-solid fa-phone-slash"></i>
         <p>decline</p>
       </div>
       <div className="triad-btn">
-      <p>Message</p>
+        <i className="fa-solid fa-comment"></i>
+        <p>Message</p>
         <i className="accept-btn fa-solid fa-phone"></i>
         <p>accept</p>
       </div>
