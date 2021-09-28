@@ -14,7 +14,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   background-color: black;
-  height: 2.5rem;
+  height: 5vh;
   
 }
 .header-cheems button{
@@ -37,22 +37,22 @@ body {
 
 }
 .cheems-main{
+  background-image: url("./images/cheems-call.png");
+  background-size: no-repeat;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  column-gap: none;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 95vh;
+ 
 }
-
-.cheems-main img{
-  height:100%;
-}
-
 .call-panel{
   display: flex;
   flex-direction: row;
   z-index: 200;
-  margin-top: -15vh;
   justify-content: space-around;
+
 }
 
 .triad-btn{
@@ -60,5 +60,22 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: -10vh;
+}
+
+.accept-btn{
+  background-color: #00b300;
+  border-radius: 100%;
+  font-size: 30px;
+  color: white;
+  border: none;
+  padding: 2rem;
+}
+
+.decline-btn{
+  background-color: #ff0000;
+  border-radius: 100%;
+  font-size: 30px;
+  color: white;
+  border: none;
+  padding: 2rem;
 }

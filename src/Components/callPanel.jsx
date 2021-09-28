@@ -5,12 +5,12 @@ const CallPanel = () => {
     <div className="call-panel">
       <div className="triad-btn">
         <p>Remind me</p>
-        <button className="decline-btn">decline</button>
+        <i className="decline-btn fa-solid fa-phone-slash"></i>
         <p>decline</p>
       </div>
       <div className="triad-btn">
       <p>Message</p>
-        <button className="accept-btn">accept</button>
+        <i className="accept-btn fa-solid fa-phone"></i>
         <p>accept</p>
       </div>
     </div>
