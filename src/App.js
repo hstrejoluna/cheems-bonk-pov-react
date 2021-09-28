@@ -1,8 +1,11 @@
-import Header from './Components/Header';
+import Header from "./Components/header";
+import Call from "./Components/call";
+
 function App() {
   return (
     <div className="App">
-    <Header></Header>
+    <Header/>
+    <Call/>
     </div>
   );
 }
