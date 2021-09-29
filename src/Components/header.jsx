@@ -1,12 +1,17 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="header-cheems">
-        <button>About</button>
+      <Link to="/about">
+        <button> About</button>
+      </Link>
 
       <h1>Cheems Call</h1>
-      <button>BONK!</button>
+      <Link to="/">
+        <button> BONK! </button>
+      </Link>
     </header>
   );
 };
