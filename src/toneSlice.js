@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import imgbonk from "./images/cheems-bonk.png";
+import cheems from "./images/cheems-call.png";
 
 const ToneAudio = new Audio("/Tone/call.mp3");
 const Bonk = new Audio("/Tone/bonk.mp3");
@@ -30,14 +32,31 @@ export const toneSlice = createSlice({
       state.audio = null;
     },
     bonk: (state) => {
-      window.navigator.vibrate([0]);
-      state.playing = false;
-      state.audio.pause();
-      state.audio = null;
-      state.play = "play";
-      state.audio = Bonk;
-      state.audio.currentTime = 0;
-      state.audio.play()
+      if (state.audio != null) {
+        document.body.style.backgroundImage = `url('${imgbonk}')`;
+        window.navigator.vibrate([100]);
+        state.playing = false;
+        state.audio.pause();
+        state.audio = null;
+        state.play = "play";
+        state.audio = Bonk;
+        state.audio.currentTime = 0;
+        state.audio.play();
+        setTimeout(() => {
+          document.body.style.backgroundImage = `url('${cheems}')`;
+        }, 200);
+      } else {
+        document.body.style.backgroundImage = `url('${imgbonk}')`;
+        window.navigator.vibrate([100]);
+        state.playing = false;
+        state.play = "play";
+        state.audio = Bonk;
+        state.audio.currentTime = 0;
+        state.audio.play();
+        setTimeout(() => {
+          document.body.style.backgroundImage = `url('${cheems}')`;
+        }, 200);
+      }
     },
   },
 });

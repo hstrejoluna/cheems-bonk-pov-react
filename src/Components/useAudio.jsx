@@ -21,7 +21,7 @@ const UseAudio = (url, setBonk) => {
       audio.play()
 
       console.log("set bonk is true!");
-      document.body.style.backgroundImage = `url('${bg}')`;
+      document.body.style.backgroundImage = "url(/images/cheems-bonk.png)";
     } else {
       document.body.style.backgroundImage = `url('${bgnb}')`;
       audio.pause();
