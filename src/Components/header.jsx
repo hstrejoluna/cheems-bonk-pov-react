@@ -5,7 +5,7 @@ import UseAudio from "./useAudio";
 
 const Header = () => {
   // url nokia spy tone
-  const [playing, toggle] = UseAudio("/Tone/call.mp3");
+  const [playing, toggle] = UseAudio("/Tone/call.mp3", false);
 
   return (
     <header className="header-cheems">
