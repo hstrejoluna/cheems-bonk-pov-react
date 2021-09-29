@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import * as React from "react";
-import UseAudio from "./useAudio";
 import { useSelector, useDispatch } from "react-redux";
 import { playTone, stopTone } from "../toneSlice";
 
@@ -22,12 +21,7 @@ const Header = () => {
       <Link to="/">
         <button
           onClick={() => {
-            if (playing) {
-              dispatch(stopTone());
-            }
-            else{
-              dispatch(playTone());
-            }    
+            playing ? dispatch(stopTone()) : dispatch(playTone());
           }}
         >
           {play}
