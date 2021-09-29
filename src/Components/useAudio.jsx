@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import bg from "../images/cheems-bonk.png";
 import bgnb from "../images/cheems-call.png";
 
-
-
 const UseAudio = (url, setBonk) => {
   const [audio] = useState(new Audio(url, setBonk));
   const [playing, setPlaying] = useState(false);
@@ -11,17 +9,18 @@ const UseAudio = (url, setBonk) => {
   const toggle = () => setPlaying(!playing);
   // play audio
   useEffect(() => {
-    if(setBonk === true && playing === true){
-        audio.pause()
-        console.log("set bonk is true!")
-        document.body.style.backgroundImage = `url('${bg}')`;
-    }
-    if (playing) {
-      window.navigator.vibrate([4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200]);
+    if (setBonk === false && playing === true) {
+      window.navigator.vibrate([
+        4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200,
+      ]);
       audio.currentTime = 0;
       audio.play();
-    }
-    else{
+    } else if (setBonk === true && playing === true) {
+      audio.play()
+
+      console.log("set bonk is true!");
+      document.body.style.backgroundImage = `url('${bg}')`;
+    } else {
       document.body.style.backgroundImage = `url('${bgnb}')`;
       audio.pause();
     }
@@ -33,7 +32,7 @@ const UseAudio = (url, setBonk) => {
       audio.removeEventListener("ended", () => setPlaying(false));
     };
   }, [audio]);
-  
+
   return [playing, toggle];
 };
 
