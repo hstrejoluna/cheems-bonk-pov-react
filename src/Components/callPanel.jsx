@@ -3,7 +3,7 @@ import UseAudio from "./useAudio";
 
 
 const CallPanel = () => {
-  const [playing, toggle] = UseAudio("/Tone/bonk.mp3", true);
+  const [toggle] = UseAudio("/Tone/bonk.mp3", true);
  
   return (
     <div className="call-panel">

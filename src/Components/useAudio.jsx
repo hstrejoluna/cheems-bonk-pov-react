@@ -12,6 +12,7 @@ const UseAudio = (url, setBonk) => {
   // play audio
   useEffect(() => {
     if(setBonk === true && playing === true){
+        audio.pause()
         console.log("set bonk is true!")
         document.body.style.backgroundImage = `url('${bg}')`;
     }
