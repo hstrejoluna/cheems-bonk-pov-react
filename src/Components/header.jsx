@@ -13,6 +13,9 @@ const useAudio = (url) => {
       audio.currentTime = 0;
       audio.play();
     }
+    else{
+      audio.pause();
+    }
   }, [playing, audio]);
 
   useEffect(() => {
