@@ -1,10 +1,11 @@
 import * as React from "react"; // the most future proof import
 import UseAudio from "./useAudio";
 
-
 const CallPanel = () => {
-  const [toggle] = UseAudio("/Tone/bonk.mp3", true);
- 
+  const [playing, toggle] = UseAudio("/Tone/bonk.mp3", true);
+  function a() {
+    <div>{playing ? "Pause" : "Play"}</div>;
+  }
   return (
     <div className="call-panel">
       <div className="triad-btn">
@@ -15,6 +16,7 @@ const CallPanel = () => {
       </div>
       <div className="triad-btn">
         <i className="fa-solid fa-comment"></i>
+
         <p>Message</p>
         <i className="accept-btn fa-solid fa-phone" onClick={toggle}></i>
         <p>accept</p>
