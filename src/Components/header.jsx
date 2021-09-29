@@ -9,7 +9,7 @@ const useAudio = (url) => {
 
   useEffect(() => {
     if (playing) {
-      window.navigator.vibrate([4000, 200, 4000, 200, 4000, 200]);
+      window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
       audio.currentTime = 0;
       audio.play();
     }
