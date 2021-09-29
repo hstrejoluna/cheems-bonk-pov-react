@@ -5,8 +5,8 @@ const useAudio = (url) => {
   const [audio] = useState(new Audio(url));
   const [playing, setPlaying] = useState(true);
 
-  const toggle = () => setPlaying(!playing);
-
+  const toggle = () => setPlaying(playing);
+  // play audio
   useEffect(() => {
     if (playing) {
       window.navigator.vibrate([4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200]);
