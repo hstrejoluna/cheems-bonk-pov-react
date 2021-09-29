@@ -1,7 +1,8 @@
 import Header from "./Components/header";
 import Call from "./Components/call";
 import About from "./Components/about";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 function App() {
   return (
