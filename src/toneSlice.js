@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const ToneAudio = new Audio("/Tone/call.mp3");
+const Bonk = new Audio("/Tone/bonk.mp3");
+
 export const toneSlice = createSlice({
   name: "tone",
   initialState: {
@@ -27,9 +29,19 @@ export const toneSlice = createSlice({
       state.audio.pause();
       state.audio = null;
     },
+    bonk: (state) => {
+      window.navigator.vibrate([0]);
+      state.playing = false;
+      state.audio.pause();
+      state.audio = null;
+      state.play = "play";
+      state.audio = Bonk;
+      state.audio.currentTime = 0;
+      state.audio.play()
+    },
   },
 });
 
-export const { playTone, stopTone } = toneSlice.actions;
+export const { playTone, stopTone, bonk } = toneSlice.actions;
 
 export default toneSlice.reducer;
