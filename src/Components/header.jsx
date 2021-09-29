@@ -11,7 +11,7 @@ const useAudio = (url) => {
     if (playing) {
       window.navigator.vibrate([4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200]);
       audio.currentTime = 0;
-      audio.play();
+      audio.autoplay = true;
     }
     else{
       audio.pause();
