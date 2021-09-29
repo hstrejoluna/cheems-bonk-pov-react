@@ -1,8 +1,7 @@
-
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
-const useAudio = url => {
+const useAudio = (url) => {
   const [audio] = useState(new Audio(url));
   const [playing, setPlaying] = useState(true);
 
@@ -10,27 +9,25 @@ const useAudio = url => {
 
   useEffect(() => {
     if (playing) {
-      audio.currentTime = 0
+      window.navigator.vibrate([4000, 200, 4000, 200, 4000, 200]);
+      audio.currentTime = 0;
       audio.play();
     }
-     
-    },
-    [playing]
-  );
+  }, [playing, audio]);
 
   useEffect(() => {
-    audio.addEventListener('ended', () => setPlaying(false));
+    audio.addEventListener("ended", () => setPlaying(false));
     return () => {
-      audio.removeEventListener('ended', () => setPlaying(false));
+      audio.removeEventListener("ended", () => setPlaying(false));
     };
-  }, []);
+  }, [audio]);
 
   return [playing, toggle];
 };
 
 const Header = () => {
   // url nokia spy tone
-  const [playing, toggle] = useAudio('/Tone/call.mp3');
+  const [playing, toggle] = useAudio("/Tone/call.mp3");
 
   return (
     <header className="header-cheems">
@@ -40,7 +37,7 @@ const Header = () => {
 
       <h1>Cheems Call</h1>
       <Link to="/">
-        <button onClick={toggle}> START </button>
+        <button onClick={toggle}>{playing ? "Pause" : "Play"}</button>
       </Link>
     </header>
   );

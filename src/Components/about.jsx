@@ -5,7 +5,7 @@ const About = () => {
     <div className="about">
       <h1>About</h1>
       <p>Developed by HS Trejo Luna</p>
-      <a>hstrejoluna.com.mx</a>
+      <a href="https://hstrejoluna.com.mx">hstrejoluna.com.mx</a>
       <a href="http://u.fsf.org/16e">
         <img
           src="https://static.fsf.org/nosvn/images/badges/fsfs_icons_beige-bg.png"
