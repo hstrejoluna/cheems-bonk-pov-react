@@ -6,7 +6,7 @@ const UseAudio = (url, setBonk) => {
   const [audio] = useState(new Audio(url, setBonk));
   const [playing, setPlaying] = useState(false);
 
-  const toggle = () => setPlaying(!playing);
+  let toggle = () => setPlaying(!playing);
   // play audio
   useEffect(() => {
     if (setBonk === false && playing === true) {
@@ -15,7 +15,11 @@ const UseAudio = (url, setBonk) => {
       ]);
       audio.currentTime = 0;
       audio.play();
+    
     } else if (setBonk === true && playing === true) {
+      audio.pause();
+      window.navigator.vibrate([0])  
+      audio.currentTime = 0;
       audio.play()
 
       console.log("set bonk is true!");
