@@ -3,11 +3,11 @@ import UseAudio from "./useAudio";
 
 const CallPanel = () => {
   const [playing, toggle] = UseAudio("/Tone/bonk.mp3", true);
-  function a() {
+
     <div>{playing ? "Pause" : "Play"}</div>;
-  }
   return (
     <div className="call-panel">
+    
       <div className="triad-btn">
         <i className="fa-solid fa-clock"></i>
         <p>Remind me</p>
