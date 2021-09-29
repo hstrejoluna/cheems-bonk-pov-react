@@ -10,9 +10,7 @@ const UseAudio = (url, setBonk) => {
   // play audio
   useEffect(() => {
     if (setBonk === false && playing === true) {
-      window.navigator.vibrate([
-        4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200,
-      ]);
+     
       audio.currentTime = 0;
       audio.play();
     
