@@ -1,0 +1,7 @@
+{
+    "name": "Cheems Call POV",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }
