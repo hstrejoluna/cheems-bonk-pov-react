@@ -1,6 +1,6 @@
 {
-    "appId": "hstrejoluna.com.mx.cheemscallpov",
-    "appName": "Cheems Call POV",
+    "appId": "hstrejoluna.com.mx.bigfloppacallpov",
+    "appName": "Big",
     "bundledWebRuntime": false,
     "npmClient": "npm",
     "webDir": "build",

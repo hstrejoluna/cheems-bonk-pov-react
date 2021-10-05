@@ -1,10 +1,13 @@
 import { Haptics } from '@capacitor/haptics';
 import { createSlice } from "@reduxjs/toolkit";
-import imgbonk from "./images/cheems-bonk.png";
-import cheems from "./images/cheems-call.png";
+import imgthree from './images/imgthree.png';
+import imgtwo from "./images/imgtwo.png";
+import imgone from "./images/imgone.png";
 
 const ToneAudio = new Audio("/Tone/call.mp3");
-const Bonk = new Audio("/Tone/bonk.mp3");
+const Accept = new Audio("/Tone/accept.mp3");
+const Decline = new Audio("/Tone/decline.mp3");
+
 
 export const toneSlice = createSlice({
   name: "tone",
@@ -16,7 +19,8 @@ export const toneSlice = createSlice({
   },
   reducers: {
     playTone: (state) => {
-      vibrate(500) 
+
+      Haptics.vibrate(500);
       window.navigator.vibrate([
         4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200,
       ]);
@@ -33,36 +37,63 @@ export const toneSlice = createSlice({
       state.audio.pause();
       state.audio = null;
     },
-    bonk: (state) => {
+    accept: (state) => {
       if (state.audio != null) {
-        document.body.style.backgroundImage = `url('${imgbonk}')`;
+        document.body.style.backgroundImage = `url('${imgtwo}')`;
         window.navigator.vibrate([100]);
         state.playing = false;
         state.audio.pause();
         state.audio = null;
         state.play = "play";
-        state.audio = Bonk;
+        state.audio = Accept;
         state.audio.currentTime = 0;
         state.audio.play();
         setTimeout(() => {
-          document.body.style.backgroundImage = `url('${cheems}')`;
+          document.body.style.backgroundImage = `url('${imgone}')`;
         }, 200);
       } else {
-        document.body.style.backgroundImage = `url('${imgbonk}')`;
+        document.body.style.backgroundImage = `url('${imgtwo}')`;
         window.navigator.vibrate([100]);
         state.playing = false;
         state.play = "play";
-        state.audio = Bonk;
+        state.audio = Accept;
         state.audio.currentTime = 0;
         state.audio.play();
         setTimeout(() => {
-          document.body.style.backgroundImage = `url('${cheems}')`;
+          document.body.style.backgroundImage = `url('${imgone}')`;
         }, 200);
+      }
+    },
+    decline: (state) => {
+      if (state.audio != null) {
+        document.body.style.backgroundImage = `url('${imgthree}')`;
+        window.navigator.vibrate([100]);
+        state.playing = false;
+        state.audio.pause();
+        state.audio = null;
+        state.play = "play";
+        state.audio = Decline;
+        state.audio.currentTime = 0;
+        state.audio.play();
+        setTimeout(() => {
+          document.body.style.backgroundImage = `url('${imgone}')`;
+        }, 500);
+      } else {
+        document.body.style.backgroundImage = `url('${imgthree}')`;
+        window.navigator.vibrate([100]);
+        state.playing = false;
+        state.play = "play";
+        state.audio = Decline;
+        state.audio.currentTime = 0;
+        state.audio.play();
+        setTimeout(() => {
+          document.body.style.backgroundImage = `url('${imgone}')`;
+        }, 500);
       }
     },
   },
 });
 
-export const { playTone, stopTone, bonk } = toneSlice.actions;
+export const { playTone, stopTone, accept, decline } = toneSlice.actions;
 
 export default toneSlice.reducer;

@@ -1,6 +1,6 @@
 import * as React from "react"; // the most future proof import
 import { useDispatch } from "react-redux";
-import { bonk } from "../toneSlice";
+import { accept, decline } from "../toneSlice";
 
 
 const CallPanel = () => {
@@ -13,14 +13,14 @@ const CallPanel = () => {
       <div className="triad-btn">
         <i className="fa-solid fa-clock"></i>
         <p>Remind me</p>
-        <i className="decline-btn fa-solid fa-phone-slash"></i>
+        <i className="decline-btn fa-solid fa-phone-slash" onClick={() => { dispatch(decline())}}></i>
         <p>decline</p>
       </div>
       <div className="triad-btn">
         <i className="fa-solid fa-comment"></i>
 
         <p>Message</p>
-        <i className="accept-btn fa-solid fa-phone" onClick={() => { dispatch(bonk())}}></i>
+        <i className="accept-btn fa-solid fa-phone" onClick={() => { dispatch(accept())}}></i>
         <p>accept</p>
       </div>
     </div>

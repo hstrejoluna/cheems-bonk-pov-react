@@ -17,7 +17,7 @@ const Header = () => {
         <button> About</button>
       </Link>
 
-      <h1>Cheems Call</h1>
+      <h1>Big Floppa Call</h1>
       <Link to="/">
         <button
           onClick={() => {
