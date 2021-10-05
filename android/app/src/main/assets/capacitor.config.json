@@ -1,0 +1,8 @@
+{
+	"appId": "hstrejoluna.com.mx.cheemscallpov",
+	"appName": "Cheems Call POV",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "build",
+	"cordova": {}
+}
