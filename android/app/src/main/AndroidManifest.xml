@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="hstrejoluna.com.mx.cheemscallpov">
+    package="hstrejoluna.com.mx.bigfloppacallpov">
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,7 @@
 
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
-            android:name="hstrejoluna.com.mx.cheemscallpov.MainActivity"
+            android:name="hstrejoluna.com.mx.bigfloppacallpov.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBarLaunch"
             android:launchMode="singleTask">

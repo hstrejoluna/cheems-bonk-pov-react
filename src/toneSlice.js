@@ -1,13 +1,12 @@
-import { Haptics } from '@capacitor/haptics';
+import { Haptics } from "@capacitor/haptics";
 import { createSlice } from "@reduxjs/toolkit";
-import imgthree from './images/imgthree.png';
+import imgthree from "./images/imgthree.png";
 import imgtwo from "./images/imgtwo.png";
 import imgone from "./images/imgone.png";
 
-const ToneAudio = new Audio("/Tone/call.mp3");
-const Accept = new Audio("/Tone/accept.mp3");
+const ToneAudio = new Audio("./Tone/call.mp3");
+const Accept = new Audio("./Tone/accept.mp3");
 const Decline = new Audio("/Tone/decline.mp3");
-
 
 export const toneSlice = createSlice({
   name: "tone",
@@ -19,8 +18,6 @@ export const toneSlice = createSlice({
   },
   reducers: {
     playTone: (state) => {
-
-      Haptics.vibrate(500);
       window.navigator.vibrate([
         4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200,
       ]);

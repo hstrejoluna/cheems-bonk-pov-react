@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion compileSdkVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "hstrejoluna.com.mx.bigfloppacallpov"
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
