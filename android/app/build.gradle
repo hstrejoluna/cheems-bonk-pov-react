@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion compileSdkVersion
+    compileSdkVersion 30
     defaultConfig {
         applicationId "hstrejoluna.com.mx.cheemscallpov"
         minSdkVersion 21

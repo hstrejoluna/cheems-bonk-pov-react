@@ -6,6 +6,9 @@ const About = () => {
       <h1>About</h1>
       <p>Developed by HS Trejo Luna</p>
       <a href="https://hstrejoluna.com.mx">hstrejoluna.com.mx</a>
+      <p>Español: ¿No te funciona el tono correctamente? checa la versión web aca:</p>
+      <p>English: the play button isn't working well? check the web version:'</p>
+      <a href="https://cheemscallhstrejoluna.netlify.app/">go to web version</a>
       <a href="http://u.fsf.org/16e">
         <img
           src="https://static.fsf.org/nosvn/images/badges/fsfs_icons_beige-bg.png"

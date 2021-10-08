@@ -1,4 +1,3 @@
-import { Haptics } from '@capacitor/haptics';
 import { createSlice } from "@reduxjs/toolkit";
 import imgbonk from "./images/cheems-bonk.png";
 import cheems from "./images/cheems-call.png";
@@ -16,7 +15,6 @@ export const toneSlice = createSlice({
   },
   reducers: {
     playTone: (state) => {
-      vibrate(500) 
       window.navigator.vibrate([
         4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200, 4000, 200,
       ]);
