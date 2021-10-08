@@ -3,9 +3,15 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
+<<<<<<< Updated upstream
         applicationId "hstrejoluna.com.mx.bigfloppacallpov"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+=======
+        applicationId "hstrejoluna.com.mx.cheemscallpov"
+        minSdkVersion 24
+        targetSdkVersion 30
+>>>>>>> Stashed changes
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -33,10 +39,19 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     implementation project(':capacitor-android')
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
+    implementation 'com.appnext.sdk:ads:2.+'
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0' // Mandatory
+    implementation 'androidx.annotation:annotation:1.1.0' // Mandatory
+    implementation "androidx.work:work-runtime:2.4.0"  // Mandatory
+    implementation 'com.github.bumptech.glide:glide:4.11.0' // Mandatory
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0' // Mandatory
+
+
 }
 
 apply from: 'capacitor.build.gradle'
